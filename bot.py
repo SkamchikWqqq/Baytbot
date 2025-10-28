@@ -1,7 +1,7 @@
 from aiogram import Bot, Dispatcher, types
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from aiogram.filters import CommandStart
-from aiogram.utils.exceptions import TelegramForbiddenError, TelegramAPIError
+from aiogram.exceptions import TelegramForbiddenError, TelegramAPIError
 import asyncio
 
 # 🔹 Твой токен

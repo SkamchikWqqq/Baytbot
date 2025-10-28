@@ -63,11 +63,11 @@ async def check_subs(callback: types.CallbackQuery):
         print(f"[Ошибка Telegram API]: {e}")
 
 
-# 🔹 Глобальный обработчик ошибок, чтобы бот не вылетал
-@dp.errors_handler()
-async def global_error_handler(update, exception):
+# 🔹 Новый обработчик ошибок (Aiogram 3)
+@dp.error()
+async def global_error_handler(event, exception):
     print(f"[GLOBAL ERROR] {exception}")
-    return True  # предотвращает остановку бота
+    return True
 
 
 async def main():
